@@ -28,7 +28,7 @@ const AppRouter = createBrowserRouter([
 function App() {
   const { user } = useSelector((store) => store.appSlice);
   return (
-    <div className="w-screen h-screen bg-[#F6F8FC]">
+    <div className="w-screen h-screen bg-[#F6F8FC] overflow-hidden">
       {user ? (
         <Login />
       ) : (

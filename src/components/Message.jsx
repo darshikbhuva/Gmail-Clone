@@ -40,7 +40,11 @@ const Message = ({ email }) => {
         </p>
       </div>
       <div className="flex-none text-gray-400 text-sm">
-        <p>{new Date(email?.createdAt?.seconds * 1000).toUTCString()}</p>
+        <p>
+          {email?.createdAt?.seconds
+            ? new Date(email.createdAt.seconds * 1000).toUTCString()
+            : ""}
+        </p>
       </div>
     </motion.div>
   );

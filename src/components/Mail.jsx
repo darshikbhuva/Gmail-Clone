@@ -89,7 +89,9 @@ const Mail = () => {
           </div>
           <div className="flex-none text-gray-400 my-5 text-sm">
             <p>
-              {new Date(selectedEmail?.createdAt?.seconds * 1000).toUTCString()}
+              {selectedEmail?.createdAt?.seconds
+                ? new Date(selectedEmail.createdAt.seconds * 1000).toUTCString()
+                : ""}
             </p>
           </div>
         </div>
